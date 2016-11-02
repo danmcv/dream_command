@@ -3,8 +3,12 @@ from django.http import HttpResponse
 
 # Create your views here.
 
+def stringmaker():
+    return "<h3> HEY THIS IS A FUNCTION </h3>"
 def index(request):
-    return HttpResponse("Rango says hey there <br/> <a href = '/rango/about/'> About </a>")
+    context_dict = {'boldmessage' : "Crunchy, creamy cookies"}
+    return render(request, 'rango/index.html', context=context_dict)
+    
 
 def about(request):
-    return HttpResponse("Rango says hey hi this is all about the about page <br/> <a href = '/rango/'> Rango Home </a>")
+    return HttpResponse("Rango says hey hi this is all about the about page <br/> <a href = '/rango/'> Rango Home </a>" + stringmaker())

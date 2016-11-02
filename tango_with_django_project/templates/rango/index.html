@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+{% load staticfiles %} <!-- New line -->
+
+
+<html>
+    <head>
+        <title>  Rango  </title>
+        <!-- CSS INFO -->
+        <link rel="stylesheet" href="{% static "css/base.css" %}" /> 
+        
+        <!-- JAVASCRIPT INFO -->
+        <script src="{% static "js/jquery.js" %}"></script>
+        
+    </head>
+
+    <body>
+        <h1>Rango Says...</h1>
+        <div>
+            hey there! <br/>
+            <strong> {{ boldmessage}} </strong> <br />
+        </div>
+
+        <div>
+            <a href = "/rango/about/"> About </a> <br />
+            <img src = "{% static "images/frank_junk.jpg" %}"
+            alt="Picture of Frank Reynolds"/>
+        </div>
+    </body>
+</html>
